@@ -20,12 +20,38 @@
     $a / $b, División, Cociente de $a y $b.
     $a % $b, Módulo, Resto de $a dividido por $b.
     $a ** $b,Exponenciación,Resultado de elevar $a a la potencia $bésima. Introducido en PHP 5.6.
+
     */
         
     echo (5 % 3)."\n";           // muestra 2
     echo (5 % -3)."\n";          // muestra 2
     echo (-5 % -3)."\n";         // muestra -2
     echo (-5 % 3)."\n";          // muestra -2
+
+        // Suma: +
+        // Resta: -
+        // Multiplicación: *
+        // División: /
+        // Módulo: %
+        // Incremento: ++
+        // Decremento: --
+        // Exponenciación: **
+        echo "<h1>Operadores Aritméticos</h1><br>";
+        $x = 9;
+        echo ("x = ".$x."<br>");
+        $y = 3;
+        echo ("y = ".$y."<br>");
+        $z = 5;
+        echo ("z = ".$z."<br>");
+        $suma = $x + $y;
+        echo ("suma = ".$suma."<br>");
+        $resta = $x - $z;
+        echo ("resta = ".$resta."<br>");
+        $multiplicacion = $suma*$resta;
+        echo ("multiplicacion = ".$multiplicacion."<br>");
+        $final = $multiplicacion++;
+        echo ("final = ".$final."<br>");
+        echo ("multiplicacion = ".$multiplicacion."<br>");
 
 
     //Operadores de comparacion
@@ -98,6 +124,19 @@
     $b = (object) ["b" => "b"];
     echo $a <=> $b; // 1
 
+        // Igual: ==
+        // Idéntico: ===
+        // Diferente: !=
+        // Menor: <
+        // Mayor: >
+        // Menor o igual: <=
+        // Mayor o igual: >=
+        echo "<h1>Operadores de comparación</h1><br>";
+        $x = 5;
+        $y = 5;
+        echo ($x == $y);
+        echo ($x <= $y);
+
     //Operadores logicos
     /*$a, and $b, And (y), true si tanto $a como $b son true.
     $a or $b, Or (o inclusivo), true si cualquiera de $a o $b es true.
@@ -131,6 +170,26 @@
 
     var_dump($g, $h);
 
+
+        // AND o &&: $a && $b es True si $a y $b son verdaderos
+        // OR o ||: $a || $b es True si $a o $b son verdaderos
+        // XOR: $a XOR $b es True si $a es verdadero o $b es verdadero, pero no los dos
+        // !: !$a es True si $a es False
+        echo "<h1>Operadores lógicos</h1><br>";
+        $x = 4;
+        $y = 5;
+
+        if(($x==4) && ($y==5))
+        {
+            print("Estás en lo correcto");
+        }
+        echo "<br>";
+        if(($x==4) OR ($y==3))
+        {
+            print("La segunda operación también es correcta");
+        }
+
+
     //Operadores de union de cadenas
     
     //Existen dos operadores para datos tipo string. El primero es el operador de concatenación ('.'), el cual retorna el resultado de concatenar sus argumentos derecho e izquierdo. El segundo es el operador de asignación sobre concatenación ('.='), el cual añade el argumento del lado derecho al argumento en el lado izquierdo.
@@ -140,6 +199,21 @@
 
     $a = "Hola ";
     $a .= "Muerte!";     // ahora $a contiene "Hola Muerte!"
+
+     // Para la unión de cadenas se emplea el punto (.)
+     echo "<h1>Operadores de unión de cadenas</h1><br>";
+     $t = "Ejemplo";
+     $w = 'unión';
+     $x = "de";
+     $y = "cadenas";
+     $z = ' ';
+     $resultado1 = $t;
+     $resultado2 = $t.$z.$x.$z.$w.$z.$x.$z.$y;
+     echo '<b><h1>';
+     echo $resultado1;
+     echo '<hr>';
+     echo $resultado2;
+     echo '</b></h1>';
     
     ?>
 </body>
