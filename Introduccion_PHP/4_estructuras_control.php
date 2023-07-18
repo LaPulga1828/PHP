@@ -23,6 +23,36 @@
             echo "a es mayor que b";
           }
 
+        //Ejemplos de profe
+
+        echo "<h1>if</h1>";
+        //Ejemplo 1
+        $color = "rojo";
+        if($color = "rojo")
+        {
+            print("Efectivamente, el color es rojo");
+        }
+
+        echo "<br>";
+        //Ejemplo 2
+        $x = 10;
+        $y = 15;
+        if($x == $y)
+        {
+            print("x e y son iguales");
+        }
+        elseif($x > $y)
+        {
+            print("x es mayor que y");
+        }
+        elseif($x < $y)
+        {
+            print("x es menor que y");
+        }
+        echo "<br>";
+        echo "<h1>while</h1>";
+
+
         //elseif
         /* elseif, como su nombre lo sugiere, es una combinación de if y else. Del mismo modo que else, extiende una sentencia if para ejecutar una sentencia diferente en caso que la expresión if original se evalúe como false. Sin embargo, a diferencia de else, esa expresión alternativa sólo se ejecutará si la expresión condicional del elseif se evalúa como true.*/
 
@@ -35,6 +65,19 @@
             echo "a es igual que b";
         } else {
             echo "a es menor que b";
+        }
+        
+        //Ejemplos de profe
+         // indica que mientras no se cumpla una determinada condición, no se saldrá del bucle y no 
+        // saltará a la siguiente linea de código
+        $x = 10;
+        while(--$x)
+        {
+            echo "<big>";
+            echo "<b>";
+            print("Número: ".$x);
+            echo "<br>";
+            echo "<hr>";
         }
 
         //while
@@ -115,14 +158,29 @@
             $i++;
         }
 
+        //Ejemplos de profe
+
+        //será utilizado para ejecutarun bucle un determinado número de veces, hasta que se cumpla una
+        // condición
+        echo "<br>";
+        echo "<h1>for</h1>";
+        for($x=5; $x<=10; $x++)
+        {
+            print("Número: ".$x."<br>");
+        }
+
         
             //require
         /*require es idéntico a include excepto que en caso de fallo producirá un error fatal de nivel E_COMPILE_ERROR. En otras palabras, éste detiene el script mientras que include sólo emitirá una advertencia (E_WARNING) lo cual permite continuar el script.*/
 
         require('somefile.php');
 
+        //Sirve para incluir archivos en nuestras paginas y solo será necesario hacer referencia
+        //a este archivo con la instrución require.  Se usa principalmente para definir variables,
+        //y estas estarán listas una vez hagamos una llamada al archivo donde estén guardadas.
 
-            //include
+
+        //include
         /*La sentencia include incluye y evalúa el archivo especificado.
 
         La siguiente documentación también se aplica a require.
@@ -151,7 +209,18 @@
 
         include 'vars.php';
 
-        echo "Una $fruta $color"; // Una manzana verde        
+        echo "Una $fruta $color"; // Una manzana verde 
+        
+        //Ejemplos de profe
+
+        // El funcionamiento es igual que el de la instrucción require(), con la diferencia de que si
+        // puede procesar el código tantas veces como la llamemos a esa pagina externa.
+
+        echo "<br>";
+        echo "<h1>include</h1>";
+        include("variables.php");
+        echo "<br>";
+        print("$x"."$z"."$y");
 
         //swith
         /*La sentencia switch es similar a una serie de sentencias IF en la misma expresión. En muchas ocasiones, es posible que se quiera comparar la misma variable (o expresión) con muchos valores diferentes, y ejecutar una parte de código distinta dependiendo de a que valor es igual. Para esto es exactamente la expresión switch.*/ 
@@ -175,6 +244,26 @@
                 echo "i es igual a 2";
                 break;
         }
+        
+        //Ejemplo profe
+
+        // Se utiliza para comprobar un dato entre varias posibilidades
+        echo "<br>";
+        echo "<h1>switch</h1>";
+        $color = "negro";
+        switch($color)
+        {
+            case "blanco":
+                $sector = "claro";
+                break;
+            case "naranja":
+                $sector = "normal";
+                break;
+            case "negro":
+                $sector = "oscuro";
+                break;
+        }
+        print($sector);
 
     ?>
 
