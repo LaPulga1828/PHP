@@ -24,15 +24,15 @@
         echo"<b><h1>";
         echo($a);
         echo"<br>";
-        echo($b):
+        echo($b);
         echo"</b></h1>";
 
     //CONSTANTES
         //La forma de definr una constante es mediante la funcion"define"
         //Sintaxis:define("nombre_variable","valor_variable")
 
-        define("capital_colombia","Bogota")
-        define("Habitantes",7000000)
+        define("capital_colombia","Bogota");
+        define("Habitantes",7000000);
 
 
 
